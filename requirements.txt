@@ -19,4 +19,4 @@ torchvision>=0.19
 
 # 辅助库
 importlib_metadata>=8.7; python_version < "3.10"
-typing_extensions>=4.14
+typing_extensions>=4.16.0
