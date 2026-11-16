@@ -5,7 +5,7 @@ scipy>=1.10
 
 # 图像处理相关
 Pillow>=9.5
-opencv-python>=4.9
+opencv-python>=5.0.0.93
 
 # 可视化库
 matplotlib>=3.7
