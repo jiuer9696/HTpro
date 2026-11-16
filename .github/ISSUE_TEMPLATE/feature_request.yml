@@ -1,0 +1,56 @@
+name: "✨ 功能建议 / 新算法"
+description: 建议新增功能、算法或分析指标
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎建议新算法！请先搜索现有 Issue，避免重复。
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 建议类型
+      options:
+        - 新增半色调算法
+        - 新增点过程分析指标
+        - 界面交互改进
+        - 性能优化
+        - 打包 / 部署
+        - 文档
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 动机与场景
+      description: 你想解决什么问题？在什么场景下需要？
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你的方案
+      description: 算法类建议请附论文名称或出处
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 参考文献 / 参考实现
+      placeholder: "作者, 标题, 期刊/会议, 年份, DOI/链接"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: 参与意愿
+      options:
+        - label: 我愿意提交 PR 实现这个功能
+          required: false

@@ -1,0 +1,98 @@
+name: "🐛 Bug 报告"
+description: 报告一个可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请先搜索是否已有相同 Issue。
+        ⚠️ 安全漏洞请勿在此提交，见 SECURITY.md。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前检查
+      options:
+        - label: 我已搜索过现有 Issue，没有发现重复
+          required: true
+        - label: 我使用的是最新提交
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望发生什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 启动 `python HTpro_ui.py`
+        2. 选择算法「VAC」，上传 xxx 图片
+        3. 点击生成后弹出报错
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及的模块
+      options:
+        - 图形界面 HTpro_ui.py
+        - 半色调算法 halftoning_algorithms
+        - 点过程分析 analysis
+        - 深度学习加网 PredictiveReversibleHalftoning
+        - 打包脚本 build.py
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 报错日志
+      description: 请用代码块包裹完整 traceback，不要只发截图
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: 样本图片
+      description: 若与特定图片有关，请拖入最小复现样本
+    validations:
+      required: false
+
+  - type: input
+    id: python
+    attributes:
+      label: Python 版本
+      placeholder: "python --version -> Python 3.10.11"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: weights
+    attributes:
+      label: 若涉及深度学习功能
+      options:
+        - label: 已按 README「模型权重」章节放置 ours_stage2.pth.tar
+          required: false

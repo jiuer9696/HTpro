@@ -1,0 +1,64 @@
+# ---------- 密钥与本地配置 ----------
+.env
+.env.*
+!.env.example
+secrets.*
+config.local.*
+
+# ---------- 打包产物（体积巨大，不入库） ----------
+dist/
+build/
+*.spec.bak
+*.exe
+*.dll
+
+# ---------- 模型权重（单文件 730MB，超出 GitHub 100MB 限制） ----------
+checkpoints/
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------- 运行时输出 ----------
+*.log
+logs/
+out_single/
+outputs/
+assets/
+tmp/
+*.tmp
+*.bak
+
+# ---------- IDE / 编辑器 ----------
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.iml
+*.suo
+*.user
+*.swp
+*~
+
+# ---------- 操作系统 ----------
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
