@@ -58,7 +58,7 @@ if __name__ == "__main__":
     image = Image.open(image_path)
 
     # 调用有序抖动算法
-    dithered_image = ordered_dithering(image)
+    dithered_image = bippcca_dithering(image)
 
     # 保存二值化后的图像为 PNG 格式以避免压缩伪影
     output_path = 'ditheredgray_image16.png'
