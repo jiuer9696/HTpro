@@ -15,5 +15,5 @@ torch==2.7.0
 torchvision==0.18.0  # 与torch 2.7.0匹配的版本
 
 # 必要的辅助库（根据实际运行可能需要）
-importlib_metadata==8.7.0
+importlib_metadata==10.2.0
 typing_extensions==4.14.1
